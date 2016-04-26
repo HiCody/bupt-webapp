@@ -1,0 +1,35 @@
+<ion-view view-title="选择传阅人">
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ui-sref="bupthq/new-contents"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-click="confirmSelectedReader()">确认</a>
+    </ion-nav-buttons>
+
+    <div class="tabs tabs-top tabs-standard tabs-positive">
+        <a class="tab-item active">传阅人列表</a>
+        <a class="tab-item" ui-sref="bupthq/reader-recent-list">最近传阅人列表</a>
+    </div>
+
+    <ion-content class="hq-newContents-personList">
+        <div class="row selected-checker" ng-show="selectedReadersList.length > 0">
+            <span ng-repeat="item in selectedReadersList" ng-click="unSelectedReader(item)">{{item.name}}</span>
+        </div>
+
+        <ion-list>
+            <ion-item class="item-stable checker-list-item" ng-repeat="item in readerList">
+                <ion-item class="item-stable" ng-click="item.selected =!item.selected ">
+                    <i class="icon ion-arrow-down-b"></i>
+                    <i class="badge">{{item.children.length}}人</i>
+                    <span>{{item.name}}</span>
+                </ion-item>
+
+                <ion-checkbox ng-checked="isSelectedReader(user)" ng-show="item.selected" class="item-accordion"
+                              ng-click="selectedReader(user)" ng-repeat="user in item.children">
+                    {{user.name}}
+                </ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

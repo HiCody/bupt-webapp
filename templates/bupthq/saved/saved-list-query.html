@@ -1,0 +1,28 @@
+<ion-view view-title="查询">
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ui-sref="bupthq/saved-list"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-click="clearCondition()">重置</a>
+    </ion-nav-buttons>
+    <ion-content class="has-footer over-auto hq-query">
+        <ion-list>
+            <ion-item class="item-icon-right" ui-sref="bupthq/saved-list-query-type">
+                <p class="light-grey">事项类型：</p>
+                <span>{{condition.typeName}}</span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item>
+                <p class="light-grey">事项标题：</p>
+                <input ng-model="condition.title" type="text" placeholder="请输入标题">
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="button-bar">
+            <a class="button button-positive" ng-click="querySavedList()">
+                确认
+            </a>
+        </div>
+    </div>
+</ion-view>

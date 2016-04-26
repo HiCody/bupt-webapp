@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- 第三方css lib包 -->
+    <link rel="stylesheet" href="lib/ionic/css/ionic.min.css"/>
+
+    <!-- 项目自己的css -->
+    <link rel="stylesheet" href="lib/yt/css/rest.css">
+    <link rel="stylesheet" href="lib/yt/css/color.css">
+    <link rel="stylesheet" href="lib/yt/css/function.css">
+    <link rel="stylesheet" href="lib/yt/css/icon.css">
+    <link rel="stylesheet" href="lib/yt/css/tips.css">
+    <link rel="stylesheet" href="lib/yt/css/button.css">
+    <link rel="stylesheet" href="lib/yt/css/actionSheet.css">
+
+    <link rel="stylesheet" href="css/bupthq/style.css">
+    <link rel="stylesheet" href="css/frame/style.css">
+
+    <!-- cordova (勿删) -->
+    <script src="cordova.js"></script>
+
+    <!-- 第三方 js包 -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular.min.js"></script>
+    <script src="lib/cordova/ng-cordova.js"></script>
+
+    <!-- 项目自己的js -->
+    <script src="js/app.js"></script>
+    <script src="lib/yt/js/lang/object.js"></script>
+    <script src="lib/yt/js/lang/date.js"></script>
+    <script src="lib/yt/js/lang/array.js"></script>
+    <script src="lib/yt/js/filter/trustAsHtml.js"></script>
+    <script src="lib/yt/js/tool/setFileIcon.js"></script>
+    <script src="lib/yt/js/tool/localStorage.js"></script>
+
+
+    <script src="js/frame/app.js"></script>
+    <script src="js/frame/login/config.js"></script>
+    <script src="js/frame/login/router.js"></script>
+    <script src="js/frame/login/controller/loginController.js"></script>
+
+    <script src="js/frame/home/config.js"></script>
+    <script src="js/frame/home/router.js"></script>
+    <script src="js/frame/home/controller/homeController.js"></script>
+    <script src="js/frame/home/service/homeService.js"></script>
+
+    <script src="js/frame/news/config.js"></script>
+    <script src="js/frame/news/router.js"></script>
+
+    <script src="js/frame/self/config.js"></script>
+    <script src="js/frame/self/router.js"></script>
+
+    <script src="js/frame/login/config.js"></script>
+    <script src="js/frame/login/router.js"></script>
+    <script src="js/frame/login/controller/loginController.js"></script>
+    <script src="js/frame/login/service/loginService.js"></script>
+
+    <script src="js/bupthq/app.js"></script>
+
+    <script src="js/bupthq/inprocessing/config.js"></script>
+    <script src="js/bupthq/inprocessing/router.js"></script>
+    <script src="js/bupthq/inprocessing/controller/inProcessingListController.js"></script>
+    <script src="js/bupthq/inprocessing/controller/inProcessingListQueryController.js"></script>
+    <script src="js/bupthq/inprocessing/controller/inProcessingListQueryTypeController.js"></script>
+    <script src="js/bupthq/inprocessing/service/InProcessingService.js"></script>
+
+    <script src="js/bupthq/newcontents/config.js"></script>
+    <script src="js/bupthq/newcontents/router.js"></script>
+    <script src="js/bupthq/newcontents/controller/newContentsController.js"></script>
+    <script src="js/bupthq/newcontents/controller/checkerListController.js"></script>
+    <script src="js/bupthq/newcontents/controller/readerListController.js"></script>
+    <script src="js/bupthq/newcontents/controller/checkerRecentListController.js"></script>
+    <script src="js/bupthq/newcontents/controller/readerRecentListController.js"></script>
+    <script src="js/bupthq/newcontents/controller/typeListController.js"></script>
+    <script src="js/bupthq/newcontents/service/newContentsService.js"></script>
+    <script src="js/bupthq/newcontents/service/checkerListService.js"></script>
+    <script src="js/bupthq/newcontents/service/readerListService.js"></script>
+
+    <script src="js/bupthq/contentsdetail/config.js"></script>
+    <script src="js/bupthq/contentsdetail/router.js"></script>
+    <script src="js/bupthq/contentsdetail/controller/contentsDetailController.js"></script>
+    <script src="js/bupthq/contentsdetail/service/contentsDetailsService.js"></script>
+
+    <script src="js/bupthq/saved/config.js"></script>
+    <script src="js/bupthq/saved/router.js"></script>
+    <script src="js/bupthq/saved/controller/savedListController.js"></script>
+    <script src="js/bupthq/saved/controller/savedListQueryController.js"></script>
+    <script src="js/bupthq/saved/controller/savedListQueryTypeController.js"></script>
+    <script src="js/bupthq/saved/service/savedService.js"></script>
+
+    <script src="js/bupthq/passed/config.js"></script>
+    <script src="js/bupthq/passed/router.js"></script>
+    <script src="js/bupthq/passed/controller/passedListController.js"></script>
+    <script src="js/bupthq/passed/controller/passedListQueryController.js"></script>
+    <script src="js/bupthq/passed/controller/passedListQueryTypeController.js"></script>
+    <script src="js/bupthq/passed/service/passedService.js"></script>
+
+    <script src="js/bupthq/unpassed/config.js"></script>
+    <script src="js/bupthq/unpassed/router.js"></script>
+    <script src="js/bupthq/unpassed/controller/unPassedListController.js"></script>
+    <script src="js/bupthq/unpassed/controller/unPassedListQueryController.js"></script>
+    <script src="js/bupthq/unpassed/controller/unPassedListQueryTypeController.js"></script>
+    <script src="js/bupthq/unpassed/service/unPassedService.js"></script>
+
+    <script src="js/bupthq/needcheck/config.js"></script>
+    <script src="js/bupthq/needcheck/router.js"></script>
+    <script src="js/bupthq/needcheck/controller/needCheckListController.js"></script>
+    <script src="js/bupthq/needcheck/controller/needCheckListQueryController.js"></script>
+    <script src="js/bupthq/needcheck/controller/needCheckListQueryTypeController.js"></script>
+    <script src="js/bupthq/needcheck/service/needCheckService.js"></script>
+
+    <script src="js/bupthq/needread/config.js"></script>
+    <script src="js/bupthq/needread/router.js"></script>
+    <script src="js/bupthq/needread/controller/needReadListController.js"></script>
+    <script src="js/bupthq/needread/controller/needReadListQueryController.js"></script>
+    <script src="js/bupthq/needread/controller/needReadListQueryTypeController.js"></script>
+    <script src="js/bupthq/needread/service/needReadService.js"></script>
+
+    <script src="js/bupthq/checkedhistory/config.js"></script>
+    <script src="js/bupthq/checkedhistory/router.js"></script>
+    <script src="js/bupthq/checkedhistory/controller/checkedHistoryListController.js"></script>
+    <script src="js/bupthq/checkedhistory/controller/checkedHistoryListQueryController.js"></script>
+    <script src="js/bupthq/checkedhistory/controller/checkedHistoryListQueryTypeController.js"></script>
+    <script src="js/bupthq/checkedhistory/service/checkedHistoryService.js"></script>
+
+    <script src="js/bupthq/readhistory/config.js"></script>
+    <script src="js/bupthq/readhistory/router.js"></script>
+    <script src="js/bupthq/readhistory/controller/readHistoryListController.js"></script>
+    <script src="js/bupthq/readhistory/controller/readHistoryListQueryController.js"></script>
+    <script src="js/bupthq/readhistory/controller/readHistoryListQueryTypeController.js"></script>
+    <script src="js/bupthq/readhistory/service/readHistoryService.js"></script>
+
+
+</head>
+<body ng-app="app">
+<ion-nav-bar class="bar-positive {{hideTabs}}" align-title="center"></ion-nav-bar>
+<ion-nav-view></ion-nav-view>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<ion-view view-title="未通过">
+
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon ion-search" ui-sref="bupthq/unpassed-list-query"></a>
+    </ion-nav-buttons>
+
+
+    <ion-content class="scroll-content over-auto hq-list">
+        <div class="sign" ng-if="!hasNextPage && unPassedListToday.length == 0 && unPassedListBefore.length == 0">
+            <i class="ion-android-alert"></i>
+
+            <p>没有找到符合条件的结果！</p>
+
+            <p>请下拉刷新！</p>
+        </div>
+        <!-- 上拉刷新 -->
+        <ion-refresher on-refresh="refreshListData()" pulling-text="下拉刷新数据" refreshing-text="刷新中..."
+                       refreshing-icon="ion-loading-b"></ion-refresher>
+        <ion-list>
+            <p ng-if="unPassedListToday.length > 0" class="pending-time">今天</p>
+
+            <ion-item class="item-content item-avatar" ng-repeat="item in unPassedListToday"
+                      ng-click="showUnPassedDetail(item.id)">
+                <div class="item-image">{{item.typeName | limitTo:2}}</div>
+                <h2><em ng-if="item.confirmByStarter == 0">●</em>{{item.title}}</h2>
+
+                <p>{{item.contents}}</p>
+                <i class="badge">{{item.currentStateDate | date:"yyyy-MM-dd"}}</i>
+            </ion-item>
+
+            <p ng-if="unPassedListBefore.length > 0" class="pending-time">以往</p>
+            <ion-item class="item-content item-avatar" ng-repeat="item in unPassedListBefore"
+                      ng-click="showUnPassedDetail(item.id)">
+                <div class="item-image">{{item.typeName | limitTo:2}}</div>
+                <h2><em ng-if="item.confirmByStarter == 0">●</em>{{item.title}}</h2>
+
+                <p>{{item.contents}}</p>
+                <i class="badge">{{item.currentStateDate | date:"yyyy-MM-dd"}}</i>
+            </ion-item>
+        </ion-list>
+
+        <!-- 下拉刷新 -->
+        <ion-infinite-scroll on-infinite="loadListData()" distance="1%" ng-if="hasNextPage"></ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view hide-tabs>
+    <ion-content class="frame-login no-header">
+        <div class="login-top">
+            <img src="img/frame/img-logo.svg">
+            <img src="img/frame/login_title.png" class="login-title">
+        </div>
+
+        <div class="content login-content">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <span>账号</span>
+                    <input type="text" placeholder="请输入账号" ng-model="loginInfo.username"/>
+                </label>
+                <label class="item item-input">
+                    <span>密码</span>
+                    <input type="password" placeholder="请输入密码" ng-model="loginInfo.password"/>
+                </label>
+            </div>
+        </div>
+
+        <ion-list class="login-checkbox">
+            <ion-item class="remember-item" >
+                <input type="checkbox"  ng-model="loginInfo.rememberPassword">记住密码
+            </ion-item>
+            <ion-item class="automatic-item" >
+                <input type="checkbox" ng-model="loginInfo.autoLogin">自动登录
+            </ion-item>
+        </ion-list>
+
+        <div class="button button-full login-btn" ng-click="login()">登录</div>
+        <div class="login-bottom">V 1.0</div>
+    </ion-content>
+</ion-view>

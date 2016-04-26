@@ -1,0 +1,66 @@
+<ion-view view-title="新申请">
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-click="submit()">提交</a>
+    </ion-nav-buttons>
+
+    <ion-content class="hq-newContents">
+        <ion-list>
+            <ion-item>
+                <p class="light-grey">提&nbsp;交&nbsp; 人：</p>
+                <span>张三</span>
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="bupthq/type-list">
+                <p class="light-grey">事项类型：</p>
+                <span>{{hqContents.typeName}}</span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="bupthq/checker-list">
+                <p class="light-grey">审&nbsp;批&nbsp; 人：</p>
+                <input type="text" placeholder="请选择审批人" readonly ng-model="checkerNames">
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-right" ui-sref="bupthq/reader-list">
+                <p class="light-grey">传&nbsp;阅&nbsp; 人：</p>
+                <input type="text" placeholder="请选择传阅人" readonly ng-model="readerNames">
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+            <ion-item>
+                <p class="light-grey">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 题：</p>
+                <input type="text" placeholder="请输入主题" ng-model="hqContents.title">
+            </ion-item>
+            <ion-item class="contents-wrapper">
+                <textarea placeholder="请输入内容" ng-model="hqContents.contents"></textarea>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <!-- 附件 -->
+    <div class="hq-newContents-attachBox">
+        <div class="row">
+            <div class="col">
+                <button class="button button-small fr ion-paperclip"
+                        ng-class="{true: 'button-positive'}[showAttachment]"
+                        ng-click="showAttachment=!showAttachment"></button>
+            </div>
+        </div>
+        <div class="row bg-grey picture-choose ng-hide" ng-show="showAttachment">
+            <div class="col col-center">
+                <button class="button button-small button-clear ion-camera" ng-click="takePhoto()"></button>
+            </div>
+            <div class="col col-center">
+                <button class="button button-small button-clear ion-android-image" ng-click="pickImage()"></button>
+            </div>
+        </div>
+        <div class="row bg-grey picture-box ng-hide" ng-show="showAttachment">
+            <div class="col col-25" ng-repeat="item in imageList" ng-click="previewOrDelete($index)">
+                <div class="img-box">
+                    <img ng-src="{{item.src}}">
+                </div>
+                <span class="{{item.statusClass}}">{{item.statusMsg}}</span>
+            </div>
+        </div>
+    </div>
+</ion-view>

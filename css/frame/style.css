@@ -1,0 +1,223 @@
+/* 登陆页面开始 */
+.frame-login .scroll {
+    height: 100%;
+    background: url("../../img/frame/splashscreen.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+.login-top {
+    overflow: hidden;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.login-top img {
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+
+.login-top img.login-title {
+    margin-right: 5%;
+    float: left;
+    margin-top: 26%;
+    width: 65%;
+    text-align: center;
+    height: 30px;
+}
+
+.login-content .list-inset {
+    margin: 20px 30px 40px 30px;
+}
+
+.login-content .list-inset span {
+    color: #666666;
+    font-size: 15px;
+}
+
+.login-content .list-inset input {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.login-checkbox {
+    overflow: hidden;
+}
+
+.login-checkbox .list .item {
+    float: left;
+    margin-left: 30px;
+    line-height: 15px;
+    background: inherit;
+    border: none;
+    margin-top: -35px;
+    color: #FFFFFF;
+}
+
+.login-checkbox .list .item.automatic-item {
+    float: right;
+    margin-right: 30px;
+}
+
+.login-checkbox input {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.button.login-btn {
+    margin: 18px 30px 80px 30px;
+    background: #0e8edd;
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #007cc9;
+    box-shadow: inset 0 0 1px 0 #41b7ff;
+}
+
+.button.login-btn.activated {
+    background-color: #0c7bbf;
+    color: #ffffff;
+}
+
+.login-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #666666;
+}
+
+/* 登陆页面结束 */
+
+/* 会签 主页 开始 */
+.hq-home .slide-box {
+    height: 150px;
+    overflow: hidden;
+}
+
+.hq-home .slide-box img {
+    width: 100%;
+}
+
+.hq-home .list-box, .list-box1 {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.hq-home .list-box .list-title,
+.hq-home .list-box1 .list-title {
+    margin-left: 16px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #333;
+}
+
+.hq-home .list-box .row,
+.hq-home .list-box1 .row {
+    margin: 0;
+    padding: 0;
+}
+
+.hq-home .list-box .col,
+.hq-home .list-box1 .col {
+    position: relative;
+    border-top: 1px solid #f4f4f4;
+    border-right: 1px solid #f4f4f4;
+    text-align: center;
+}
+
+.hq-home .list-box .col {
+    padding: 16px;
+}
+
+.hq-home .list-box1 .col {
+    padding: 18px;
+}
+
+.hq-home .list-box .col img {
+    height: 26px;
+}
+
+.list-box1 .col img {
+    height: 28px;
+}
+
+.hq-home .list-box .col p,
+.hq-home .list-box1 .col p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.hq-home .list-box1 .col div {
+    font-size: 12px;
+    color: #666;
+    height: 28px;
+    width: 90px;
+    line-height: 28px;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.hq-home .list-box1 .col div span {
+    height: 14px;
+    text-align: left;
+}
+
+.hq-home .rang-bug {
+    margin-top: -7px;
+}
+
+/* 会签 主页 结束 */
+
+/*  popover 开始  */
+.menu-box .menu-list .current{
+    color:#000000;
+}
+
+.menu-box .menu-list {
+    width:100%;
+    height:204px;
+}
+
+.menu-box .menu-list li {
+    padding-left: 18px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    border-top:1px solid #f2f2f2;
+}
+
+.menu-box .menu-list li:first-child{
+    border: none;
+}
+
+.menu-box .menu-list li:hover{
+    background-color: #f2f2f2;
+}
+
+.popover{
+    width: 150px;
+    height:206px;
+}
+
+.popover-hide{
+    width: 0;
+    height:0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.platform-ios .popover .scroll-content {
+    margin:0;
+}
+
+/*  popover 结束  */

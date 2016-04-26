@@ -1,0 +1,9 @@
+<ion-popover-view>
+    <ion-content>
+        <div class="menu-box" ng-class="">
+            <ul class="menu-list">
+                <li class="current"  ng-repeat="org in orgList" ng-click="changeOrg(org.id)">{{org.name}}</li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-popover-view>

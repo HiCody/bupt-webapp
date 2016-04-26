@@ -1,0 +1,27 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.block {
+    display: block;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.over-auto{
+    overflow-y:auto;
+}

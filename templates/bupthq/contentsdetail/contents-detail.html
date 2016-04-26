@@ -1,0 +1,58 @@
+<ion-view view-title="会签详细">
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ng-click="goBack()"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-if="needCheck" ng-click="checkContents()">审批</a>
+    </ion-nav-buttons>
+
+
+    <ion-content class="bg-grey hq-detail">
+        <div class="white-wrapper">
+            <ion-list>
+                <ion-item>
+                    <h2>会签申请信息</h2>
+
+                    <p>事项标题：<span class="font-bold">{{hqContents.hq_contents.title}}</span></p>
+
+                    <p>事项类型：<span class="font-bold">{{hqContents.hq_contents.typeName}}</span></p>
+
+                    <p>发&nbsp;&nbsp;件 &nbsp;人：<span class="font-bold">{{hqContents.hq_contents.ownerName}}</span></p>
+
+                    <p>发件时间：<span>{{hqContents.hq_contents.currentStateDate  | date:"yyyy年MM月dd日 HH时mm分"}}</span></p>
+                </ion-item>
+                <ion-item class="pb-none">
+                    <h2>事项内容</h2>
+
+                    <p class="text-justify" ng-bind-html="hqContents.hq_contents.contents | to_trusted"></p><br/>
+
+                    <ion-list class="inner-item">
+
+                        <ion-item class="item-avatar" ng-repeat="item in hqContents.hq_contents_checkersList"
+                                  ng-if="item.state != 0">
+                            <div class="item-image"><i class="ion ion-person"></i></div>
+                            <em>{{item.realName}}</em>
+
+                            <p>{{item.comment}}</p>
+
+                            <p class="light-grey">{{item.checkDate  | date:"yyyy-MM-dd mm:ss"}}</p>
+                        </ion-item>
+
+                    </ion-list>
+                </ion-item>
+
+                <ion-item ng-if="hqContents.hq_contents_attachList.length > 0">
+                    <p><i class="icon icon-left ion-paperclip"></i>{{hqContents.hq_contents_attachList.length}}个附件</p>
+                    <ion-list class="icon-accessory">
+                        <ion-item class="item" ng-click="downloadFile(item.name,item.url)"
+                                  ng-repeat="item in hqContents.hq_contents_attachList">
+                            <div class="square"><i class="iconfont" ng-bind-html="item.icon | to_trusted"></i></div>
+                            <p class="attachFile">{{item.name}}</p>
+                        </ion-item>
+                    </ion-list>
+                </ion-item>
+
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

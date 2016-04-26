@@ -1,0 +1,87 @@
+<ion-view view-title="首页">
+    <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-click="openPopover($event)">切换</a>
+    </ion-nav-buttons>
+    <ion-content class="bg-grey hq-home">
+
+        <!-- 头部幻灯开始 -->
+        <ion-slide-box class="slide-box" does-continue="true" slide-interval="2000" auto-play="true" show-pager="false">
+            <ion-slide>
+                <img src="img/frame/banner.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="img/frame/banner1.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="img/frame/banner.png">
+            </ion-slide>
+        </ion-slide-box>
+        <!-- 头部幻灯结束 -->
+
+        <!-- 财务报销开始 -->
+        <div class="list-box">
+            <div class="row"><span class="list-title">网上报销</span></div>
+            <div class="row">
+                <a class="col">
+                    <img src="img/buptcw/mycard.svg"/>
+
+                    <p>我的经费卡</p>
+                </a>
+                <a class="col">
+                    <img src="img/buptcw/commonbaoxiao.svg"/>
+
+                    <p>普通报销</p>
+                </a>
+                <a class="col">
+                    <img src="img/buptcw/chailv.svg"/>
+
+                    <p>差旅报销</p>
+                </a>
+            </div>
+            <div class="row">
+                <a class="col">
+                    <img src="img/buptcw/repayment.svg">
+
+                    <p>报销还款</p>
+                </a>
+                <a class="col">
+                    <img src="img/buptcw/person.svg">
+
+                    <p>指定报销人</p>
+                </a>
+                <a class="col"></a>
+            </div>
+        </div>
+        <!-- 财务报销结束 -->
+
+        <!-- 网上会签开始 -->
+        <div class="list-box1 clearfix" ng-if="hqMenuList.length > 0">
+            <div class="row"><span class="list-title">网上会签</span></a></div>
+            <div class="row fl" ng-repeat="item in hqMenuList" style="width: 50%;">
+                <a class="col" ng-click="linkPage(item)">
+                    <img class="fl" ng-src="{{item.icon}}">
+
+                    <div class="fl">
+                        <span ng-if="!item.extra.count">{{item.text}}</span>
+
+                        <p ng-if="item.extra.count">
+                            <span class="block rang-bug">{{item.text}}</span>
+                            <span class="orange">{{item.extra.count}}</span>
+                            <span class="grey">条待处理</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="row fl" style="width: 50%" ng-if="hqMenuList.length%2 != 0">
+                <a class="col">&nbsp;</a>
+            </div>
+        </div>
+
+        <!-- 网上会签结束 -->
+    </ion-content>
+</ion-view>
+
+<script id="my-popover.html?userId=29&orgId=2" type="text/ng-template">
+
+</script>

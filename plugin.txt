@@ -1,0 +1,15 @@
+--摄像机所需插件
+cordova plugin add cordova-plugin-camera
+
+--本地文件所需插件
+cordova plugin add org.apache.cordova.file
+
+--文件传输所需插件
+cordova plugin add org.apache.cordova.file-transfer
+
+--图片选择所需插件
+cordova plugin add cordova-plugin-image-picker
+
+
+--图片预览所需要插件
+cordova plugin add com-sarriaroman-photoviewer

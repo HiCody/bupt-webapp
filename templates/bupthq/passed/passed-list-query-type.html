@@ -1,0 +1,13 @@
+<ion-view view-title="事项类型">
+    <ion-nav-buttons side="left">
+        <a class="button button-icon ion-ios-arrow-left" ui-sref="bupthq/passed-list-query"></a>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <ion-radio radio-color="balanced" ng-repeat="item in hqTypeDataList" ng-click="selectHqType(item)"
+                       ng-value="item.id" ng-model="condition.type">
+                {{item.name}}
+            </ion-radio>
+        </div>
+    </ion-content>
+</ion-view>

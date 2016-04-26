@@ -1,0 +1,290 @@
+/* 会签 公用列表 开始 */
+.hq-list .pending-time {
+    margin: 5px 0;
+    padding-left: 15px;
+    font-size: 13px;
+    color: #9e9e9e;
+}
+
+.hq-list .item-avatar .item-image {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #70B1F1;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hq-list .item-content p {
+    font-size: 12px;
+    color: #9e9e9e;
+    padding-right: 1px;
+}
+
+.hq-list .item-content h2 em {
+    color: red;
+    font-size: 18px;
+}
+
+.hq-list .item-content .badge {
+    font-weight: normal;
+}
+
+.hq-list .item h2 {
+    font-size: 15px;
+    margin-right: 120px;
+}
+/* 会签 公用列表 结束 */
+
+/* 会签 公用详细页 开始 */
+.hq-detail .white-wrapper {
+    margin: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #E7EAEC;
+}
+
+.hq-detail h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #666;
+}
+
+.hq-detail p {
+    font-size: 12px;
+    color: #666;
+    white-space: normal;
+}
+
+.hq-detail .inner-item em {
+    font-size: 12px;
+    color: #5d9cec;
+}
+
+.hq-detail .item {
+    border-bottom-width: 0;
+    border-color: #E7EAEC;
+}
+
+.hq-detail .inner-item .item {
+    border-width: 0;
+    border-top: 1px dashed #bbb;
+}
+
+.hq-detail .icon-accessory .item {
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 1px solid #f0f0f0;
+    background-color: #f9f9f9;
+}
+
+.hq-detail .ion-paperclip {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 15px;
+    transform: rotate(-45deg);
+}
+
+.hq-detail .square {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: #1ab394;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.hq-detail .icon-accessory .iconfont {
+    font-size: 24px;
+}
+
+.hq-detail .item-avatar .item-image {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #bbb;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.hq-detail .pb-none{
+    padding-bottom: 0;
+}
+
+.hq-detail .attachFile {
+    line-height: 40px;
+    font-size: 14px;
+}
+/* 会签 公用详细页 结束 */
+
+/* 会签 公用搜索页 开始 */
+.hq-query p {
+    float: left;
+    width: 80px;
+}
+
+.hq-query input {
+    width: 70%;
+    height: 22px;
+}
+/* 会签 公用搜索页 结束 */
+
+/* 会签 新申请 开始 */
+.hq-newContents .item .light-grey {
+    color: #aaa;
+}
+
+.hq-newContents p {
+    float: left;
+    font-size: 16px;
+    width: 80px;
+}
+
+.hq-newContents input {
+    height: 20px;
+    line-height: 20px;
+    width: 68%;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.hq-newContents input[readonly] {
+    background-color: #fff;
+}
+
+.hq-newContents .item .item-content.activated input[readonly] {
+    background-color: #d9d9d9;
+}
+
+.hq-newContents textarea {
+    width: 100%;
+    min-height: 200px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.hq-newContents .contents-wrapper {
+    border-bottom: 0;
+}
+
+/* 会签 新申请 结束 */
+
+/* 会签 新申请 附件 开始 */
+.hq-newContents-attachBox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.hq-newContents-attachBox .button {
+    font-size: 24px;
+}
+
+.hq-newContents-attachBox .ion-paperclip.button-small {
+    padding: 1px 15px 0 14px;
+    min-height: 24px;
+    line-height: 24px;
+}
+
+.hq-newContents-attachBox .ion-paperclip:before {
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+}
+
+.hq-newContents-attachBox .col {
+    text-align: center;
+}
+
+.hq-newContents-attachBox .picture-choose {
+    padding: 0;
+}
+
+.hq-newContents-attachBox .picture-choose .col {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 5px;
+}
+
+.hq-newContents-attachBox .bg-grey {
+    background-color: #f6f6f6;
+}
+
+.hq-newContents-attachBox .col span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
+.hq-newContents-attachBox .row.picture-box {
+    padding: 40px 0;
+    overflow-x: auto;
+}
+
+.hq-newContents-attachBox .col .light-grey {
+    height: 8px;
+    line-height: 8px;
+    font-size: 8px;
+    color: #b3b3b3;
+}
+
+.hq-newContents-attachBox .img-box {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hq-newContents-attachBox .col img {
+    width: 100%;
+}
+/* 会签 新申请 附件 结束 */
+
+/* 会签 新申请 审批人，传阅人 开始 */
+.hq-newContents-personList {
+    top: 93px;
+}
+
+.hq-newContents-personList .checker-list-item.item {
+    padding: 0px;
+}
+
+.hq-newContents-personList .selected-checker {
+    padding: 8px;
+}
+
+.hq-newContents-personList .selected-checker span {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 2px;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    background: palevioletred;
+    color: white;
+}
+
+.hq-newContents-personList .tabs-striped .tab-item.tab-item-active {
+    border-color: #387ef5;
+}
+/* 会签 新申请 审批人，传阅人 结束 */
+
+/* 会签 新申请 最近审批人，最近传阅人 开始 */
+.hq-newContents-recentPerson .list {
+    margin-top: 48px;
+}
+
+.hq-newContents-recentPerson .list-tip {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+/* 会签 新申请 最近审批人，最近传阅人 结束 */

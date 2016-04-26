@@ -1,0 +1,16 @@
+/* 无数据 无网络 */
+.sign {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sign i {
+    font-size: 80px;
+    color: #bbb;
+}
+
+.sign p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #999;
+}
